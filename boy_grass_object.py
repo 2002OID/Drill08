@@ -1,5 +1,5 @@
 from pico2d import *
-
+import random
 
 # Game object class here
 class Grass:
@@ -13,7 +13,7 @@ class Grass:
 
 class Boy:
     def __init__(self):
-        self.x, self.y = 0, 90
+        self.x, self.y = random.randint(0, 700), 90
         self.frame = 0
         self.image = load_image('run_animation.png')
 
