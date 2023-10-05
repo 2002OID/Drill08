@@ -76,11 +76,11 @@ def reset_world():
     #team = [Boy() for i in range(11)]
     #world += team
     sb = random.randint(0,20 + 1)
-    small_balls = [Small_Ball() for i in range(sb)]
-    world += small_balls
     bb = 20 - sb
     big_balls = [Big_Ball() for i in range(bb)]
     world += big_balls
+    small_balls = [Small_Ball() for i in range(sb)]
+    world += small_balls
 def update_world():
     for o in world:
         o.update()
@@ -106,3 +106,5 @@ while running:
 # finalization code
 
 close_canvas()
+
+#fin
