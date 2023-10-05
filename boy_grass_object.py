@@ -1,15 +1,17 @@
 from pico2d import *
 import random
 
+
 # Game object class here
 class Grass:
-    def __init__(self):     #생성자 함수, __init__고정, 객체의 초기상태(속성, 속성값) 설정
+    def __init__(self):  # 생성자 함수, __init__고정, 객체의 초기상태(속성, 속성값) 설정
         self.image = load_image('grass.png')
 
     def draw(self):
         self.image.draw(400, 30)
 
     def update(self): pass
+
 
 class Boy:
     def __init__(self):
@@ -23,6 +25,7 @@ class Boy:
 
     def draw(self):
         self.image.clip_draw(self.frame * 100, 0, 100, 100, self.x, self.y)
+
 
 def handle_events():
     global running
@@ -42,6 +45,7 @@ def reset_world():
     running = True
     grass = Grass()
     team = [Boy() for i in range(11)]
+
 
 def update_world():
     grass.update()
