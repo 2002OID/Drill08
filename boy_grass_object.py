@@ -30,6 +30,7 @@ def reset_world():
 
 
 def update_world():
+    grass.update()
     pass
 
 
